@@ -260,7 +260,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		        encoding: "FLAC",
 		        sampleRateHertz: sample_rate,
 		        languageCode: language,
-				//enableWordConfidence: true,
+				enableWordConfidence: true,
 		        maxAlternatives: alternatives 
 		      },
 		      audio: {
@@ -294,7 +294,8 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 //			    oAjaxReq.setRequestHeader("Authorization", "Bearer "+key);
 //			    oAjaxReq.withCredentials = true;
 //		    }
-		    oAjaxReq.open("post", "https://speech.googleapis.com/v1/speech:recognize"+params, true);
+		    //oAjaxReq.open("post", "https://speech.googleapis.com/v1/speech:recognize"+params, true);
+		    oAjaxReq.open("post", "https://speech.googleapis.com/v1p1beta1/speech:recognize"+params, true);
 		    
 		    
 		    
