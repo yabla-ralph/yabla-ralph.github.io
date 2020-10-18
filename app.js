@@ -260,7 +260,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		        encoding: "FLAC",
 		        sampleRateHertz: sample_rate,
 		        languageCode: language,
-				enableWordConfidence: true,
+				//enableWordConfidence: true,
 		        maxAlternatives: alternatives 
 		      },
 		      audio: {
