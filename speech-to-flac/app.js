@@ -262,10 +262,16 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		            languageCode: language,
 		            enableWordTimeOffsets: true,
 		            enableWordConfidence: true,
-		            speechContexts: [{
+		            speechContexts: [
+					{
 		                phrases: ["whether"],
+		                boost: 15
+		            },
+					{
+		                phrases: ["weather"],
 		                boost: 2
-		            }],
+		            }
+					],
 		            maxAlternatives: alternatives
 		        },
 		        audio: {
