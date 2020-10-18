@@ -257,16 +257,20 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 			var audioData = reader.result.replace(/^data:audio\/flac;base64,/,'');
 		    data = {
 		        config: {
-		        encoding: "FLAC",
-		        sampleRateHertz: sample_rate,
-		        languageCode: language,
-				enableWordTimeOffsets: true,
-				enableWordConfidence: true,
-		        maxAlternatives: alternatives 
-		      },
-		      audio: {
-		        content: audioData
-		      }
+		            encoding: "FLAC",
+		            sampleRateHertz: sample_rate,
+		            languageCode: language,
+		            enableWordTimeOffsets: true,
+		            enableWordConfidence: true,
+		            speechContexts: [{
+		                phrases: ["whether"],
+		                boost: 2
+		            }],
+		            maxAlternatives: alternatives
+		        },
+		        audio: {
+		            content: audioData
+		        }
 		    };
 		    
 		    var oAjaxReq = new XMLHttpRequest();
