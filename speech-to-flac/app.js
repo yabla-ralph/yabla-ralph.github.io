@@ -267,6 +267,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		            languageCode: language,
 		            enableWordTimeOffsets: true,
 		            enableWordConfidence: true,
+					/*
 		            speechContexts: [
 					{
 		                phrases: ["whether"],
@@ -277,6 +278,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		                boost: 2
 		            }
 					],
+					*/
 		            maxAlternatives: alternatives
 		        },
 		        audio: {
