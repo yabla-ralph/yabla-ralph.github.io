@@ -58,6 +58,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 	$scope.boost = function() {
         //$scope.configparm = parm;
 		console.log('parm',$scope.boostvalue);
+		console.log('parm',JSON.parse($scope.boostvalue));
     };
 
 	$scope.recordaswave = function(isUseWavFormat) {
@@ -268,6 +269,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		            languageCode: language,
 		            enableWordTimeOffsets: true,
 		            enableWordConfidence: true,
+					speechContexts: [],
 					/*
 		            speechContexts: [
 					{
@@ -286,7 +288,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		            content: audioData
 		        }
 		    };
-		    
+		    data.config.speechContexts = JSON.parse($scope.boostvalue)).speechContexts;
 		    var oAjaxReq = new XMLHttpRequest();
 		  
 		    oAjaxReq.onload = ajaxSuccess;
