@@ -24,8 +24,11 @@
 				</div>
 			</div>
 			<div class="row">
-						<input type="checkbox" ng-disabled="isNotASRCapable" ng-model="wordsenabled" ng-click="setwordsenabled(wordenable);" />
+				<div class="span12 text-center">
+						<input type="checkbox" ng-disabled="isNotASRCapable" ng-model="wordsenabled" ng-click="togglewordsenabled();" />
+							<span>enable word level details</span>
 					<br><textarea placeholder="config boost" type="text" name="boost" ng-model="boostvalue" ng-change="boost();" rows="3" cols="3" ></textarea>
+				</div>
 			</div>
 			<div class="row">
 

@@ -24,6 +24,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
     $scope.outfilename_flac = "output.flac";
     $scope.outfilename_wav = "output.wav";
 	$scope.boostvalue='{"speechContexts":[{"phrases":["whether"],"boost":15},{"phrases":["weather"],"boost":2}]}';
+	$scope.enablewords=false;
     
     //ASR-related settings (using Google Cloud Speech service)
     
@@ -54,8 +55,9 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
     // (and updates page accordingly, i.e. enable/disable check-box for sending audio to ASR service):
     var __def_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
     $scope.isNotASRCapable = $scope._google_api_key === __def_key;
-	$scope.setwordsenabled = function(parm) {
-		console.log('parm',parm);
+	$scope.togglewordsenabled = function() {
+		$scope.enablewords= !  $scope.enablewords;
+		console.log('$scope.enablewords', $scope.enablewords);
     };
     
 	$scope.boost = function() {
