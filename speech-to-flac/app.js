@@ -272,8 +272,8 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		            encoding: "FLAC",
 		            sampleRateHertz: sample_rate,
 		            languageCode: language,
-		            enableWordTimeOffsets: true,
-		            enableWordConfidence: true,
+		            enableWordTimeOffsets: $scope.enablewords,
+		            enableWordConfidence: $scope.enablewords,
 					speechContexts: [],
 					/*
 		            speechContexts: [
