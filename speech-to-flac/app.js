@@ -23,6 +23,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
     $scope.wav_format = false;
     $scope.outfilename_flac = "output.flac";
     $scope.outfilename_wav = "output.wav";
+	$scope.boostvalue='{"speechContexts":[{"phrases":["whether"],"boost":15},{"phrases":["weather"],"boost":2}]}';
     
     //ASR-related settings (using Google Cloud Speech service)
     
