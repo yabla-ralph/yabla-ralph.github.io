@@ -54,6 +54,9 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
     // (and updates page accordingly, i.e. enable/disable check-box for sending audio to ASR service):
     var __def_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
     $scope.isNotASRCapable = $scope._google_api_key === __def_key;
+	$scope.setwordsenabled = function(parm) {
+		console.log('parm',parm);
+    };
     
 	$scope.boost = function() {
         //$scope.configparm = parm;
