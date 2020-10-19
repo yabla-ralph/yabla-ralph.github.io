@@ -54,6 +54,11 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
     var __def_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
     $scope.isNotASRCapable = $scope._google_api_key === __def_key;
     
+	$scope.boost = function(parm) {
+        $scope.configparm = parm;
+		console.log('parm',parm);
+    };
+
 	$scope.recordaswave = function(isUseWavFormat) {
         $scope.wav_format = isUseWavFormat;
     };
