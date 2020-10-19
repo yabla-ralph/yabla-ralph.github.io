@@ -288,7 +288,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		            content: audioData
 		        }
 		    };
-		    data.config.speechContexts = JSON.parse($scope.boostvalue)).speechContexts;
+		    data.config.speechContexts = JSON.parse($scope.boostvalue))['speechContexts'];
 		    var oAjaxReq = new XMLHttpRequest();
 		  
 		    oAjaxReq.onload = ajaxSuccess;
