@@ -108,6 +108,33 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 					}
 					else {
 						$scope.sendASRRequest(e.data.buf);
+						// also send to vocapia
+						/*
+						$ curl -ksS -u yabla:v3IG6dMN https://rest3.vocapia.com:8093/voxsigma -F method=vrbs_trans -F model=eng -F audiofile=@output.flac
+<?xml version="1.0" encoding="UTF-8"?>
+<AudioDoc name="output" path="output.flac">
+<ProcList>
+<Proc name="vrbs_part" version="2.6"/>
+<Proc name="vrbs_trans.eng-usa" version="6.2" editor="Vocapia Research"/>
+</ProcList>
+<ChannelList>
+<Channel num="1" sigdur="0.98" spdur="0.96" nw="5" tconf="0.90"/>
+</ChannelList>
+<SpeakerList>
+<Speaker ch="1" dur="0.96" gender="2" spkid="FS1" lang="eng-usa" lconf="1.00" nw="5" tconf="0.90"/>
+</SpeakerList>
+<SegmentList>
+<SpeechSegment ch="1" sconf="1.00" stime="0.01" etime="0.97" spkid="FS1" lang="eng-usa" lconf="1.00" trs="1">
+<Word stime="0.01" dur="0.30" conf="0.981"> Any </Word>
+<Word stime="0.34" dur="0.11" conf="0.945"> of </Word>
+<Word stime="0.45" dur="0.17" conf="0.947"> you </Word>
+<Word stime="0.66" dur="0.16" conf="0.640"> said </Word>
+<Word stime="0.82" dur="0.00" conf="0.999"> . </Word>
+</SpeechSegment>
+</SegmentList>
+</AudioDoc>
+*/
+
 					}
 					
 				}
