@@ -109,6 +109,17 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 					else {
 						$scope.sendASRRequest(e.data.buf);
 						console.log('e.data.buf',e.data.buf);
+						var fd = new FormData();
+						fd.append('audiofile', e.data.buf, 'test.flac');
+					
+ const response = await fetch('https://rest3.vocapia.com:8093/voxsigma',
+{
+    method: 'post',
+    headers: {Authorization: 'Basic ' + base64.encode("yabla:v3IG6dMN")},
+    body: fd
+});
+console.log('response',response);
+
 						// also send to vocapia
 						/*
 						$ curl -ksS -u yabla:v3IG6dMN https://rest3.vocapia.com:8093/voxsigma -F method=vrbs_trans -F model=eng -F audiofile=@output.flac
