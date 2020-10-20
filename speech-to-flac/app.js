@@ -115,7 +115,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
  const response = /*await*/ fetch('https://rest3.vocapia.com:8093/voxsigma',
 {
     method: 'post',
-    headers: {Authorization: 'Basic ' + base64.encode("yabla:v3IG6dMN")},
+    headers: {Authorization: 'Basic ' + btoa("yabla:v3IG6dMN")},
     body: fd
 });
 console.log('response',response);
