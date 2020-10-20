@@ -111,7 +111,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 						console.log('e.data.buf',e.data.buf);
 /**/
 						var fd = new FormData();
-						fd.append('audiofile', e.data.buf, 'test.flac');
+						fd.append('audiofile', new Blob([e.data.buf]), 'test.flac');
 					
 						 const response = fetch('https://rest3.vocapia.com:8093/voxsigma?method=vrbs_trans&model=eng',
 						{
