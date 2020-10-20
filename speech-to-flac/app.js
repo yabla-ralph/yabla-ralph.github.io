@@ -109,7 +109,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 					else {
 						$scope.sendASRRequest(e.data.buf);
 						console.log('e.data.buf',e.data.buf);
-/**/
+/*
 						var fd = new FormData();
 						fd.append('audiofile', new Blob([e.data.buf]), 'test.flac');
 					
@@ -120,7 +120,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 							body: fd
 						});
 						console.log('response',response);
-/**/
+*/
 
 						// also send to vocapia
 						/*
